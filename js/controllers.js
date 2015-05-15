@@ -7,11 +7,16 @@ angular.module('cans.controllers',[])
         };
     })
 
-.controller('ModalWindowCtrl',function($scope){
+.controller('ModalWindowCtrl',function($scope,$modal){
         $scope.showModalWindow = true;
         $scope.toggleModalWindow = function(){
             $scope.showModalWindow = $scope.showModalWindow === false ? true: false;
             console.log($scope.showModalWindow)
         }
+
+    })
+
+.controller('CarouselCtrl',function($scope){
+        $scope.slideInterval = 5000;
 
     })

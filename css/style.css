@@ -39,6 +39,40 @@ h3.center{
     margin-top: 0;
 }
 
+
+/* ------------------------ image background ------------------------ */
+
+.image-bg {
+    overflow: hidden;
+    background-size: cover;
+    background-image: url('../img/12.jpg');
+    background-position: center 16%;
+    position: relative;
+}
+
+
+.overlay-bg {position: absolute; top: 0; left: 0; right: 0; bottom: 0;  opacity: 0.5;
+    background-color: #000;
+    z-index: 10;}
+
+
+.dark-bg a {
+    color: #23A657;
+}
+.light-typo {
+    color: #fff;
+}
+
+.section-header{
+    margin-bottom: 40px;
+}
+footer {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.img-center {
+    margin: 0 auto;
+}
 /* ------------------------ nav bar ------------------------ */
 
 .navbar{
@@ -414,4 +448,69 @@ body.modal-open {
 /* ------------------------ table ----------------------*/
 table{
     font-size: 18px;
+}
+
+.paymentMethodImg img {
+    margin-left: 5px;
+    /*text-align: center;*/
+}
+
+/* ------------------------ order form ----------------------*/
+#main-footer,
+#social {
+    padding: 40px 0 20px;
+}
+.checkbox, .radio {
+    margin-bottom: 12px;
+    padding-left: 32px;
+    position: relative;
+    -webkit-transition: color 0.25s linear;
+    transition: color 0.25s linear;
+    font-size: 14px;
+    line-height: 1.5;
+}
+label.show {
+    display: block;
+    text-decoration: none;
+    /* display: inline; */
+}
+input[type=radio],input[type=checkbox] {
+    margin: 4px 7px 0 0;
+    line-height: normal;
+    font-size: 21px;
+    /* display: inherit; */
+    /*float: left;*/
+    text-align: center;
+}
+form p {
+    margin-top: 16px;
+}
+#total {
+    font-weight: 600;
+}
+
+.input-group .input-group-btn .btn{
+    margin: 0;
+}
+
+.form-control-inline {
+    min-width: 0;
+    width: auto!important;
+    display: inline!important;
+}
+
+.table tbody>tr>td.vert-align {
+    vertical-align: middle;
+}
+
+/* ------------------------------ Media -------------------------- */
+@media (max-width: 480px) {
+    .copyright {
+        width: 100%;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
 }
