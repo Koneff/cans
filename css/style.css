@@ -28,6 +28,18 @@ h3.center{
     margin: 25px 0 20px 0;
 }
 
+
+/* ------------------------ colors ------------------------ */
+.gray-bg {
+    background-color: #f2f2f2;
+}
+.color-bg{
+    background-color:#23A657;
+}
+.dark-bg {
+    background-color: #323A42;
+}
+
 /* ------------------------ section ----------------------*/
 .section-header h2{
     margin-top: 0;
@@ -118,6 +130,7 @@ footer {
     padding: 12px 23px;
     display: inline-block;
     margin: 0 10px 10px 0;
+    text-align: center;
     text-transform: uppercase;
     text-decoration: none;
     letter-spacing: 1px;
@@ -156,6 +169,14 @@ footer {
     font-weight: 600;
 }
 
+.btn-store.outline:hover,
+.btn-store.outline:focus,
+.btn-store.outline:active {
+    background: #23A657;
+    color:#FFF;
+    top:0;
+    text-decoration: none;
+}
 /* ------------------------ actions ----------------------*/
 .cta {
     padding: 50px 0 30px;
@@ -455,7 +476,184 @@ table{
     /*text-align: center;*/
 }
 
-/* ------------------------ order form ----------------------*/
+
+/* ------------------------------ Contact -------------------------- */
+.contact-info h2{
+    margin-top: 0;
+}
+address {
+    font-size: 18px;
+    text-align: center;
+}
+
+.colorWhite, .colorWhite i {
+    color: #fff !important;
+}
+.contact-item h2{
+    font-size:18px;
+    font-weight:600;
+    margin-bottom:10px;
+}
+.contact-item .icon{
+    display:block;
+    font-size:48px;
+    color:#5cc9df;
+    text-shadow:-2px 2px 0 rgba(0,0,0,0.1);
+    -webkit-transition:all .3s ease-out;
+    transition:all .3s ease-out;
+}
+.contact-item .icon:hover{
+    color:#5cc9df;
+    -webkit-transform:scale(1.3) translateY(-10px);
+    transform:scale(1.3) translateY(-10px);
+}
+.bl_form {
+    margin: 30px 0 0;
+}
+.bl_form input {
+    padding-top: 15px;
+    background: rgba(255,255,255,0.10);
+    box-shadow: 0 4px 0px rgba(0,0,0,0.2);
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+}
+.lb_wrap .lb_label.top,
+.lb_wrap .lb_label.bottom {
+    left: 66px !important;
+}
+.lb_wrap .lb_label.left {
+    left: 0;
+}
+.lb_label {
+    font-size:17px;
+    line-height:32px;
+    font-weight: 400;
+    color: #ccc;
+}
+.no-placeholder .lb_label {
+    display:none;
+}
+.lb_label.active {
+    color: #aaa;
+}
+#order-form .form-group label,
+#contact-form .form-group label{
+    display:none;
+    font-size:18px;
+    line-height:24px;
+    font-weight:100;
+    text-align: center;
+    /* text-transform:uppercase; */
+}
+#order-form .no-placeholder .form-group label,
+#contact-form .no-placeholder .form-group label{
+    display:block;
+}
+#order-form.controls {
+    /* padding:0; */
+}
+#order-form.no-placeholder .controls,
+#contact-form.no-placeholder .controls {
+    margin-top:0;
+}
+#order-form .form-control,
+#contact-form .form-control,
+.input-group .form-control {
+    display:inline;
+    background:#fff;
+    border:none;
+    /* border-radius:5px; */
+    outline:none;
+    height: 44px;
+    font-size:18px;
+    line-height:32px;
+    color:#aaa;
+    font-weight:400;
+    vertical-align:top;
+    border:2px solid #FFF;
+    box-shadow:none;
+}
+
+.special {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+}
+
+#order-form.form-group.half-width{
+    width:40%;
+    float:left;
+}
+#order-form.btn-store{
+    margin: 0;
+}
+#order-form.form-group{
+    /* position:relative; */
+}
+#order-form.form-group [class*=fa] {
+    display:block;
+    width:64px;
+    position:absolute;
+    top:0;
+    left:5px;
+    color:#eee;
+    font-size:24px;
+    line-height:52px;
+    text-align:center;
+    font-weight:300;
+    -webkit-transition:color .3s ease-out;
+    transition:color .3s ease-out;
+}
+#order-form.form-group [class*=fa].active{
+    color:#ccc;
+}
+#order-form.no-placeholder .form-group [class*=fa]{
+    top:30px;
+}
+#order-form textarea.form-control,
+#contact-form textarea.form-control {
+    height:auto;
+    max-width:100%;
+    min-width:100%;
+    font-size:18px;
+    font-weight:400;
+    line-height:24px;
+    padding-top:14px;
+    vertical-align:top;
+    border:2px solid #FFF;
+}
+#contact-form .form-control:focus,
+#order-form .form-control:focus,
+.input-group .form-control:focus {
+    outline:none;
+    border: 2px solid #23A657;
+}
+#order-form .inputError,
+#order-form textarea.form-control.inputError,
+#newsletter-form .inputError {
+    outline:none;
+    border:2px solid #F05557;
+}
+
+#order-form.error-message {
+    position:absolute;
+    top:15px;
+    right:12px;
+    font-size:15px;
+    line-height:24px;
+    font-weight:400;
+    color:#F05557;
+    z-index:10;
+}
+#order-form.no-placeholder .error-message {
+    top:0;
+}
+.input-group-btn .btn-king {
+    margin: 0;
+}
 #main-footer,
 #social {
     padding: 40px 0 20px;
@@ -503,14 +701,67 @@ form p {
     vertical-align: middle;
 }
 
+/* 320px order-form fix */
+#order-form table td:first-child,
+#order-form table th:first-child {
+    padding-left: 0;
+}
+#order-form table td:last-child,
+#order-form table th:last-child {
+    padding-right: 0;
+}
+
+
 /* ------------------------------ Media -------------------------- */
 @media (max-width: 480px) {
     .copyright {
         width: 100%;
         text-align: center;
     }
-
-    h2 {
-        font-size: 26px;
+    h2 {font-size: 26px;}
+}
+@media (max-width: 768px) {
+    .text-col,
+    .text-col2,
+    .cta-message {
+        text-align: center;
     }
+    .hero-slider, .hero-sloder h2 {
+        text-align: center !important;
+    }
+    .modal-header .loader{
+        top:15%;
+    }
+    .modal-header {
+        height: 350px;
+    }
+    .welcome-content {
+        top: 43%;
+    }
+    .welcome-content img {
+        padding: 0 15px;
+    }
+    .padding-top-bottom {
+        padding: 30px 0;
+    }
+    h1 {font-size: 28px;}
+    h3 {/* font-size: 18px; */}
+    .news {
+        padding-bottom: 40px;
+    }
+
+}
+@media (max-width: 992px) {
+    .cta-message {
+        text-align: center;
+    }
+    .text-col{
+        margin-top: 0;
+    }
+}
+@media (min-width: 1200px) {
+    .modal-header {
+        height: 650px;
+    }
+
 }
