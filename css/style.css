@@ -28,6 +28,44 @@ h3.center{
     margin: 25px 0 20px 0;
 }
 
+/* ------------------------ carousel ------------------------ */
+.welcome-content h2{
+    font-size: 80px;
+    font-weight: 200;
+}
+.welcome-content {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    margin-top: -10em;
+    z-index: 12;
+}
+
+#hero h2 {
+    font-size: 18px;
+}
+#hero .btn-store {
+    margin: 0;
+}
+#hero img {
+    margin: 0 auto 0 auto;
+    /* max-width: 300px; */
+    margin-bottom: 15px;
+    position: relative; top: 0; left: 0; right: 0; bottom: 0;
+}
+.carousel-indicators li {
+    background-color: #f2f2f2;
+    z-index: 20;
+}
+.carousel-indicators .active {
+    background-color: #23A657;
+
+}
+
+.carousel-caption {
+    color: #23A657;
+}
 
 /* ------------------------ colors ------------------------ */
 .gray-bg {
@@ -57,8 +95,7 @@ h3.center{
 .image-bg {
     overflow: hidden;
     background-size: cover;
-    background-image: url('../img/12.jpg');
-    background-position: center 16%;
+    background: url('/img/01.JPG') center 16%;
     position: relative;
 }
 
@@ -121,6 +158,8 @@ footer {
 .media>.pull-left {
     margin-right: 15px;
 }
+
+
 /* ------------------------ buttons ----------------------*/
 .btn-store{
     border: none;
@@ -726,7 +765,7 @@ form p {
     .cta-message {
         text-align: center;
     }
-    .hero-slider, .hero-sloder h2 {
+    .hero-slider, .hero-slider h2 {
         text-align: center !important;
     }
     .modal-header .loader{

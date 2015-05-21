@@ -11,6 +11,7 @@
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
 
     <script src="js/app.js"></script>
@@ -34,7 +35,29 @@
     </div>
 </div>
 </div>
-<section id="hero"></section>
+<section id="hero" class="padding-top-bottom light-typo">
+    <div class="container welcome-content">
+        <div class="row">
+            <div class="col-lg-4 col-lg-4-offset-4 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs 12 text-center" style="visibility: visible;">
+                <h2>Приветствуем в нашем магазине</h2>
+                <a class="btn btn-store" href="#products">Посмотреть товары</a>
+            </div>
+        </div>
+    </div>
+
+    <div ng-controller="CarouselCtrl">
+        <div style="height: 805">
+        <carousel interval="myInterval">
+            <slide ng-repeat="slide in slides" active="slide.active">
+                <img ng-src="{{slide.image}}" style="margin: auto;">
+                <div class="carousel-caption">
+                    <h1>{{slide.text}}</h1>
+                </div>
+            </slide>
+        </carousel>
+        </div>
+    </div>
+</section>
 
 <section id="products" class="padding-top-bottom">
     <div class="container">
@@ -46,12 +69,12 @@
                 <div ng-click="toggleModalWindow()" class="img-box">
                     <div class="hover-mask2"></div>
                     <span class="product-icon icon-eye"></span>
-                    <img class="img-responsive food-img" src="http://dadaeda.ru/upload/blogs/fb9bf7304593b1fb8c92dc22b64caec4.jpg" alt>
+                    <img class="img-responsive food-img" src="img/1.jpg" alt="">
                 </div>
                 <div class="product-info col-md-12">
                     <p class="food-price">35 грн</p>
                     <div>
-                        <h4 class="food-title">Килька</h4>
+                        <h4 class="food-title">Сельдь</h4>
                     </div>
                 </div>
                 <div class="sr-only food-description">
@@ -65,7 +88,7 @@
                 <div class="img-box">
                     <div class="hover-mask2"></div>
                     <span class="product-icon icon-eye"></span>
-                    <img class="img-responsive food-img" src="http://img-fotki.yandex.ru/get/4609/wardog777.0/0_41b56_388c99dc_XL.jpg" alt>
+                    <img class="img-responsive food-img" src="img/2.jpg" alt="">
                 </div>
                 <div class="product-info col-md-12">
                     <p class="food-price">45 грн</p>

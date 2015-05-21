@@ -17,6 +17,20 @@ angular.module('cans.controllers',[])
     })
 
 .controller('CarouselCtrl',function($scope){
-        $scope.slideInterval = 5000;
+        $scope.slideInterval = 7000;
+        var slides = $scope.slides = [];
+        $scope.addSlide = function(){
+            var newWidth = slides.length + 1;
+            console.log(newWidth);
+            slides.push({
+                image: 'img/' + newWidth + '.jpg',
+                text: ['Скумбрия в томатном соку','Толстолобик маринованный','Сельдь с лимоном'][slides.length%3]
+            })
+
+        }
+        for (var i=0;i<3;i++){
+            $scope.addSlide()
+        }
+
 
     })
