@@ -28,6 +28,21 @@ h3.center{
     margin: 25px 0 20px 0;
 }
 
+.iconBig {
+    font-size: 50px;
+    display: block;
+    /* border-radius: 50%; */
+    /* border: 2px solid #fff; */
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 0 auto;
+    /* line-height: 50px; */
+}
+.iconBig:before {
+    line-height: 100px;
+}
+
+
 /* ------------------------ carousel ------------------------ */
 .welcome-content h2{
     font-size: 80px;
@@ -762,6 +777,46 @@ form p {
     padding-right: 0;
 }
 
+/* ------------------------------ social links -------------------------- */
+.social-links,
+.social-profiles {
+    list-style:none;
+    margin:0;
+    padding:0;
+    margin-bottom: 29px;
+}
+.social-links li,
+.social-profiles li{
+    display:inline-block;
+    margin: 9px 9px 0 9px;
+    border-radius:3px;
+    box-shadow:0 4px 0 transparent;
+    -webkit-transition:all .3s ease-out;
+    transition:all .3s ease-out;
+}
+.social-links li a {
+    background: transparent;
+    border: 2px solid #fff;
+    display:block;
+    color:#FFF;
+    font-size: 18px;
+    width: 48px;
+    height: 48px;
+    line-height: 48px;
+    text-align:center;
+    border-radius:50%;
+    -webkit-transition:all .3s ease-out;
+    transition:all .3s ease-out;
+}
+.social-links li a i{
+
+}
+.social-links li a:hover {
+    color:#FFF;
+    background:#23A657;
+    text-decoration: none;
+    border-color: #23A657;
+}
 
 /* ------------------------------ Media -------------------------- */
 @media (max-width: 480px) {

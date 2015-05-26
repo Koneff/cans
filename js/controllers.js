@@ -37,14 +37,11 @@ angular.module('cans.controllers',['cans.services'])
 
 .controller('ScrollCtrl',function($scope,$location,anchorSmoothScroll){
         $scope.goToAnchor = function(sID){
-           /* var newHash= x;
-            if ($location.hash()!== newHash){
-                $location.hash(x)
-            } else{
-                $anchorScroll();*/
-            $location.hash('bottom');
+
+            $location.hash(sID);
 
             // call $anchorScroll()
             anchorSmoothScroll.scrollTo(sID);
+            $location.search(sID, null);
             }
         })

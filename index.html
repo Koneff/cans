@@ -5,7 +5,7 @@
     <title></title>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/icons.css">
+    <link rel="stylesheet" href="http://i.icomoon.io/public/temp/54588bc94d/UntitledProject/style.css">
 
     <script src="bower_components/angular/angular.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -21,11 +21,12 @@
 </head>
 
 <body id="home" style="margin: 0px;" ng-app="cans">
+<div id="scrolling-area" ng-controller="ScrollCtrl">
 <div id="main-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation" >
     <div class="container" >
         <div class="navbar-header">
         <div class="collapse navbar-collapse">
-            <ul id="navigation" class="nav navbar-nav navbar-right text-center"ng-controller="ScrollCtrl">
+            <ul id="navigation" class="nav navbar-nav navbar-right text-center">
                 <li><a ng-click="goToAnchor('products')">Продукты</a></li>
                 <li><a ng-click="goToAnchor('about')">О нас</a></li>
                 <li><a ng-click="goToAnchor('order')">Заказ</a></li>
@@ -43,7 +44,12 @@
         <div class="row">
             <div class="col-lg-4 col-lg-4-offset-4 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs 12 text-center" style="visibility: visible;">
                 <h2>Приветствуем в нашем магазине</h2>
-                <a class="btn btn-store" href="#products">Посмотреть товары</a>
+                <ul class="social-links text-center">
+                    <li><a href=""><i class="icon-twitter"></i></a></li>
+                    <li><a href=""><i class="icon-facebook"></i></a></li>
+                    <li><a href=""><i class="icon-google-plus"></i></a></li>
+                </ul>
+                <a class="btn btn-store" ng-click="goToAnchor('products')">Посмотреть товары</a>
             </div>
         </div>
     </div>
@@ -160,12 +166,30 @@
                     fringilla ac, varius sed dolor. Donec augue lacus, vulputate sed consectetur facilisis, interdum pharetra ligula. Nulla suscipit erat nibh,
                     ut porttitor nisl dapibus eu.
                 </p>
-                <a class="btn btn-store outline" ng-click="toggleShowMe()" id="show-btn" href="#showme">Еще</a>
+                <a class="btn btn-store outline" ng-click="toggleShowMe()" id="show-btn">Еще</a>
             </div>
         </div>
     </div>
 </section>
-
+<section id="cta" class="padding-top-bottom color-bg light-typo">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-4 col-sm-4 news" style="visibility: visible;">
+                <i class="icon-trophy iconBig"></i>
+                <h3>Качество гарантировано</h3>
+            </div>
+            <div class="col-md-4 col-sm-4 news" style="visibility: visible;">
+                <i class="icon-truck iconBig"></i>
+                <h3>Быстрая доставка</h3>
+            </div>
+            <div class="col-md-4 col-sm-4" style="visibility: visible;">
+                <i class="icon-spoon-knife iconBig"></i>
+                <h3>Свежие продукты</h3>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
 <section id="contact" class="gray-bg padding-top-bottom">
     <div class="container">
         <header class="section-header text-center">
@@ -179,7 +203,7 @@
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-4" style="visibility: visible;">
                 <address>
-                    <strong>Cans' site</strong>
+                    <strong>prosol.dp.ua</strong>
                     <br>
                     								пр. Калинина, 100
                     <br>
@@ -218,7 +242,7 @@
 <footer id="main-footer" class="dark-bg light-typo" style="background-color: #4c4c4c;">
     <div class="container">
         <p class="pull-left copyright" style="visibility: visible;">
-           " Cans' site"
+           prosol.dp.ua
             <br>
             Designed by <a href="https://github.com/Koneff" target="_blank">Anton Konev</a>
         </p>
@@ -227,5 +251,6 @@
         </div>
     </div>
 </footer>
+</div>
 </body>
 </html>

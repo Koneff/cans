@@ -3,9 +3,6 @@ angular.module('cans.services',[])
 
         this.scrollTo = function(sID) {
 
-            // This scrolling function
-            // is from http://www.itnewb.com/tutorial/Creating-the-Smooth-Scroll-Effect-with-JavaScript
-
             var startY = currentYPosition();
             var stopY = sectionYPosition(sID);
             var distance = stopY > startY ? stopY - startY : startY - stopY;
@@ -39,7 +36,7 @@ angular.module('cans.services',[])
                 return 0;
             }
 
-            function sectionYPosition(eID) {
+            function sectionYPosition(sID) {
                 var section = document.getElementById(sID);
                 var y = section.offsetTop;
                 var node = section;
