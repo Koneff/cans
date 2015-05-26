@@ -1,4 +1,4 @@
-angular.module('cans.controllers',[])
+angular.module('cans.controllers',['cans.services'])
 
 .controller('ToggleCtrl',function($scope){
         $scope.showMe = true;
@@ -34,3 +34,17 @@ angular.module('cans.controllers',[])
 
 
     })
+
+.controller('ScrollCtrl',function($scope,$location,anchorSmoothScroll){
+        $scope.goToAnchor = function(sID){
+           /* var newHash= x;
+            if ($location.hash()!== newHash){
+                $location.hash(x)
+            } else{
+                $anchorScroll();*/
+            $location.hash('bottom');
+
+            // call $anchorScroll()
+            anchorSmoothScroll.scrollTo(sID);
+            }
+        })

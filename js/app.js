@@ -21,4 +21,7 @@ angular.module('cans',['ui.router','ui.bootstrap','cans.controllers'])
 
         // Public Heroku server
         //url: 'https://ionic-songhop.herokuapp.com'
-    });
+    })
+    .run(['$anchorScroll', function($anchorScroll) {
+        $anchorScroll.yOffset = 100;   // always scroll by 50 extra pixels
+    }])
