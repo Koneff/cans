@@ -20,10 +20,10 @@ angular.module('cans.controllers',['cans.services'])
         $scope.slideInterval = 7000;
         var slides = $scope.slides = [];
         $scope.addSlide = function(){
-            var newWidth = slides.length + 1;
-            console.log(newWidth);
+            var newQuantity = slides.length + 1;
+            console.log(newQuantity);
             slides.push({
-                image: 'img/' + newWidth + '.jpg',
+                image: 'img/' + newQuantity + '.jpg',
                 text: ['Скумбрия в томатном соку','Толстолобик маринованный','Сельдь с лимоном'][slides.length%3]
             })
 
