@@ -70,80 +70,57 @@
 
 <section id="products" class="padding-top-bottom" ng-controller="ProductCtrl">
     <div class="container">
-        <header class="section-header text-center" style="visibility: visible"><h2 ng-click="submitLoading()">Продукты</h2></header>
+        <header class="section-header text-center" style="visibility: visible"><h2>Продукты</h2></header>
     </div>
     <div class="container">
         <div  id="food-container" class="row">
-            <article class="design product col-xs-12 col-sm-4 col-md-6" style="visibility: visible;">
+            <article ng-repeat="product in allProducts" class="design product col-xs-12 col-sm-4 col-md-6" style="visibility: visible;">
                 <div class="img-box">
-                    <div class="hover-mask2" data-toggle="modal" data-target="#food-modal"></div>
+                    <div class="hover-mask2" data-toggle="modal" data-target="#food-modal{{$index}}"></div>
                     <span class="product-icon icon-eye"></span>
-                    <img class="img-responsive food-img" src="img/1.jpg" alt="">
+                    <img class="img-responsive food-img" src="{{product.image}}" alt="">
                 </div>
                 <div class="product-info col-md-12">
-                    <p class="food-price">35 грн</p>
+                    <p class="food-price">{{product.price}} грн</p>
                     <div>
-                        <h4 class="food-title">Сельдь</h4>
+                        <h4 class="food-title">{{product.name}}</h4>
                     </div>
                 </div>
                 <div class="sr-only food-description">
                     <p>
-                        Сельдь1Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sapien risus, blandit at fringilla ac, varius sed dolor. Donec augue lacus,
-                        vulputate sed consectetur facilisis, interdum pharetra ligula. Nulla suscipit erat nibh, ut porttitor nisl dapibus eu.
+                        {{product.description}}
                     </p>
                 </div>
-            </article>
-            <article class="design product col-xs-12 col-sm-4 col-md-6" style="visibility: visible;">
-                <div class="img-box">
-                    <div class="hover-mask2" data-toggle="modal" data-target="#food-modal"></div>
-                    <span class="product-icon icon-eye"></span>
-                    <img class="img-responsive food-img" src="img/2.jpg" alt="">
-                </div>
-                <div class="product-info col-md-12">
-                    <p class="food-price">45 грн</p>
-                    <div>
-                        <h4 class="food-title">Толстолобик</h4>
-                    </div>
-                </div>
-                <div class="sr-only food-description">
-                    <p>
-                        Толстолобик1Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sapien risus, blandit at fringilla ac, varius sed dolor. Donec augue lacus,
-                        vulputate sed consectetur facilisis, interdum pharetra ligula. Nulla suscipit erat nibh, ut porttitor nisl dapibus eu.
-                    </p>
-                </div>
-            </article>
 
-        </div>
-    </div>
-
-    <div id="food-modal" class="modal in" style="display:none" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <a class="close" href="#" data-dismiss="modal">
-                        <i class="icon-cross"></i>
-                    </a>
-                    <div class="loader" style="display: block;"></div>
-                    <div class="screen" style="position:relative;overflow:hidden;width:100%;height: 650px;"></div>
-                </div>
-                <div class="modal-body">
-                    <div class="container">
-                        <div class="row">
-                            <div id="food-sidebar" class="col-md-4">
-                                <h2 id="sdbr-title">LOOL</h2>
-                                <div id="sdbr-price">40</div>
-                            </div>
-                            <div id="food-content" class="col-md-8">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sapien risus, blandit at
-                                    fringilla ac, varius sed dolor. Donec augue lacus, vulputate sed consectetur facilisis, interdum pharetra ligula.
-                                    Nulla suscipit erat nibh, ut porttitor nisl dapibus eu.</p>
+                <div id="food-modal{{$index}}" class="modal in" style="display:none" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <a class="close" href="#" data-dismiss="modal">
+                                <i class="icon-cross"></i>
+                            </a>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container">
+                                <div class="row">
+                                    <div id="food-sidebar" class="col-md-4">
+                                        <h2 id="sdbr-title">{{product.name}}</h2>
+                                        <div id="sdbr-price">{{product.price}}</div>
+                                    </div>
+                                    <div id="food-content" class="col-md-8">
+                                        <p>{{product.description}}</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+            </article>
+            </div>
     </div>
+
+
 </section>
 <section class="gray-bg padding-top-bottom">
     <div class="container">
@@ -294,6 +271,8 @@
                     При получении Вы имеете право посмотреть Ваш заказ и затем оплатить  стоимость заказа.
                     Также Вы имеете право полностью отказаться от заказанного товара.
                     Частичный отказ в системе "Новой почты" невозможен! (Это касается заказов, в которых есть два и более товара).
+                    </div>
+                <div class="col-xs-12 col-sm-6 col-md-6">
 
                     Оплата Заказа:
 
