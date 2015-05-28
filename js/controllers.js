@@ -45,3 +45,25 @@ angular.module('cans.controllers',['cans.services'])
             $location.search(sID, null);
             }
         })
+
+.controller('ProductCtrl',function($scope,$http,Products){
+        $scope.submitLoading = function(){Products.getProducts()
+            .then(function(){
+                $scope.allProducts = Products.queue;
+                console.log($scope.allProducts)
+            });
+        }
+
+        /*$scope.dataLoaded = false;
+
+        $scope.submitLoading = function(){
+            Products.getProducts().then(function(successResponse){
+                $scope.dataLoaded = true;
+                $scope.productInfo = Products.queue;
+                console.log($scope.productInfo);
+            },function(failureResponse){
+                $scope.dataLoaded = false;
+                console.log(failureResponse);
+            })
+        }*/
+    });

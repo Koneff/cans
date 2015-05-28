@@ -68,15 +68,15 @@
     </div>
 </section>
 
-<section id="products" class="padding-top-bottom">
+<section id="products" class="padding-top-bottom" ng-controller="ProductCtrl">
     <div class="container">
-        <header class="section-header text-center" style="visibility: visible"><h2>Продукты</h2></header>
+        <header class="section-header text-center" style="visibility: visible"><h2 ng-click="submitLoading()">Продукты</h2></header>
     </div>
     <div class="container">
-        <div ng-controller="ModalWindowCtrl" id="food-container" class="row">
+        <div  id="food-container" class="row">
             <article class="design product col-xs-12 col-sm-4 col-md-6" style="visibility: visible;">
-                <div ng-click="toggleModalWindow()" class="img-box">
-                    <div class="hover-mask2"></div>
+                <div class="img-box">
+                    <div class="hover-mask2" data-toggle="modal" data-target="#food-modal"></div>
                     <span class="product-icon icon-eye"></span>
                     <img class="img-responsive food-img" src="img/1.jpg" alt="">
                 </div>
@@ -88,14 +88,14 @@
                 </div>
                 <div class="sr-only food-description">
                     <p>
-                        1Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sapien risus, blandit at fringilla ac, varius sed dolor. Donec augue lacus,
+                        Сельдь1Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sapien risus, blandit at fringilla ac, varius sed dolor. Donec augue lacus,
                         vulputate sed consectetur facilisis, interdum pharetra ligula. Nulla suscipit erat nibh, ut porttitor nisl dapibus eu.
                     </p>
                 </div>
             </article>
             <article class="design product col-xs-12 col-sm-4 col-md-6" style="visibility: visible;">
                 <div class="img-box">
-                    <div class="hover-mask2"></div>
+                    <div class="hover-mask2" data-toggle="modal" data-target="#food-modal"></div>
                     <span class="product-icon icon-eye"></span>
                     <img class="img-responsive food-img" src="img/2.jpg" alt="">
                 </div>
@@ -107,7 +107,7 @@
                 </div>
                 <div class="sr-only food-description">
                     <p>
-                        1Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sapien risus, blandit at fringilla ac, varius sed dolor. Donec augue lacus,
+                        Толстолобик1Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sapien risus, blandit at fringilla ac, varius sed dolor. Donec augue lacus,
                         vulputate sed consectetur facilisis, interdum pharetra ligula. Nulla suscipit erat nibh, ut porttitor nisl dapibus eu.
                     </p>
                 </div>
@@ -116,7 +116,7 @@
         </div>
     </div>
 
-    <div id="food-modal" class="modal" style="display:none" aria-hidden="true">
+    <div id="food-modal" class="modal in" style="display:none" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">

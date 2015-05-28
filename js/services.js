@@ -48,4 +48,38 @@ angular.module('cans.services',[])
 
         };
 
-    });
+    })
+
+    .factory('Products',function($http,$q){
+        var o = {
+            queue: []
+        }
+        o.getProducts = function(){
+           // var deferred = $q.defer();
+            return $http({
+                method: 'Get',
+                url: 'data/data.json',
+                dataType: 'json',
+                headers: {
+                    'Accept': 'application/json, text/javascript',
+                    'Content-Type': 'application/json; charset=utf-8'
+                }
+            }).success(function(data){
+                //console.log('success',successResponse);
+                angular.forEach(data, function (item) {
+                    o.queue.push({
+                        id: item.id,
+                        name: item.name,
+                        image: item.image,
+                        description: item.text,
+                        price: item.price,
+                        oldPrice: item['old-price']
+                    })
+                });
+                //deferred.resolve(successResponse);
+
+            });
+        };
+        return o;
+
+    })
