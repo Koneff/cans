@@ -186,6 +186,62 @@ footer {
     margin-right: 15px;
 }
 
+.navbar-brand {
+    /*line-height: 30px;*/
+    padding: 7px 0 0 15px;
+    /*margin-left: 0;*/
+}
+.navbar>.container .navbar-brand,.navbar>.container-fluid .navbar-brand {
+    /*margin-left:0;*/
+}
+.navbar-collapse{
+    padding: 5px 0;
+}
+
+.navbar-btn {
+    background-color: #23A657;
+    border: 0;
+    color: #FFF;
+    font-weight: 300;
+}
+
+.dropdown{
+    padding-top: 13px;
+}
+
+.dropdown-toggle{
+    background-color: #23A657;
+    color: #FFF;
+    border: 0;
+    font-weight: 300;
+}
+.dropdown-toggle:hover,.dropdown-toggle:focus,.dropdown-toggle:active, .open .dropdown-toggle.btn-default{
+    background-color: #000;
+    color: #FFF;
+}
+.dropdown-menu {
+    min-width: 120px;
+    background-color: #000;
+    border: 0;
+    color: #FFF;
+}
+.dropdown-menu>li>a {
+    color:#FFF;
+    font-weight: 300;
+}
+.dropdown-menu>li>a:hover,.dropdown-menu>li>a:focus{
+    background-color: #23A657;
+    color: #FFF;
+}
+.navbar-toggle {
+    margin-top: 14px;
+    margin-bottom: 14px;
+}
+
+.navbar-toggle.second{
+    padding: 6px 10px 6px 10px;
+}
+
 
 /* ------------------------ buttons ----------------------*/
 .btn-store{
@@ -242,6 +298,13 @@ footer {
     color:#FFF;
     top:0;
     text-decoration: none;
+}
+
+.navbar-inverse .navbar-toggle {
+    border: none;
+}
+.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
+    background-color: #23A657;
 }
 /* ------------------------ actions ----------------------*/
 .cta {
