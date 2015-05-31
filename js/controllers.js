@@ -33,7 +33,7 @@ angular.module('cans.controllers',['cans.services'])
 
             // call $anchorScroll()
             anchorSmoothScroll.scrollTo(sID);
-            $location.search(sID, null);
+            $location.search(""+sID, null);
             }
         })
 
