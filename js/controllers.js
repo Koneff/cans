@@ -44,4 +44,12 @@ angular.module('cans.controllers',['cans.services'])
                 console.log($scope.allProducts)
             });
 
-    });
+    })
+
+.controller('MessageCreateCtrl',function($http,$scope,$location,Message,Mandrill){
+        $scope.sendMessage = function(){
+            var thisMessage = {
+                
+            }
+        }
+    })
