@@ -49,7 +49,7 @@ angular.module('cans.controllers',['cans.services'])
 .controller('MessageCreateCtrl',function($http,$scope,$location,Message,Mandrill){
         $scope.sendMessage = function(){
             var thisMessage = {
-                
+
             }
         }
     })
