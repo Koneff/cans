@@ -46,10 +46,14 @@ angular.module('cans.controllers',['cans.services'])
 
     })
 
-.controller('MessageCreateCtrl',function($http,$scope,$location,Message,Mandrill){
-        $scope.sendMessage = function(){
-            var thisMessage = {
 
+
+.controller('SubmitCtrl',function($scope){
+        $scope.submitMessage = function(){
+            if ($scope.contactForm.$valid) {
+
+            } else {
+                $scope.submitted = true;
             }
         }
     })

@@ -642,7 +642,7 @@ address {
 .lb_label.active {
     color: #aaa;
 }
-#order-form .form-group label,
+
 #contact-form .form-group label{
     display:none;
     font-size:18px;
@@ -651,18 +651,15 @@ address {
     text-align: center;
     /* text-transform:uppercase; */
 }
-#order-form .no-placeholder .form-group label,
+
 #contact-form .no-placeholder .form-group label{
     display:block;
 }
-#order-form.controls {
-    /* padding:0; */
-}
-#order-form.no-placeholder .controls,
+
 #contact-form.no-placeholder .controls {
     margin-top:0;
 }
-#order-form .form-control,
+
 #contact-form .form-control,
 .input-group .form-control {
     display:inline;
@@ -685,37 +682,7 @@ address {
     border-top-right-radius: 0;
 }
 
-#order-form.form-group.half-width{
-    width:40%;
-    float:left;
-}
-#order-form.btn-store{
-    margin: 0;
-}
-#order-form.form-group{
-    /* position:relative; */
-}
-#order-form.form-group [class*=fa] {
-    display:block;
-    width:64px;
-    position:absolute;
-    top:0;
-    left:5px;
-    color:#eee;
-    font-size:24px;
-    line-height:52px;
-    text-align:center;
-    font-weight:300;
-    -webkit-transition:color .3s ease-out;
-    transition:color .3s ease-out;
-}
-#order-form.form-group [class*=fa].active{
-    color:#ccc;
-}
-#order-form.no-placeholder .form-group [class*=fa]{
-    top:30px;
-}
-#order-form textarea.form-control,
+
 #contact-form textarea.form-control {
     height:auto;
     max-width:100%;
@@ -728,31 +695,25 @@ address {
     border:2px solid #FFF;
 }
 #contact-form .form-control:focus,
-#order-form .form-control:focus,
 .input-group .form-control:focus {
     outline:none;
     border: 2px solid #23A657;
 }
-#order-form .inputError,
-#order-form textarea.form-control.inputError,
-#newsletter-form .inputError {
+.inputError,
+ {
     outline:none;
     border:2px solid #F05557;
 }
 
-#order-form.error-message {
-    position:absolute;
+.errormessage {
     top:15px;
     right:12px;
     font-size:15px;
     line-height:24px;
     font-weight:400;
     color:#F05557;
-    z-index:10;
 }
-#order-form.no-placeholder .error-message {
-    top:0;
-}
+
 .input-group-btn .btn-king {
     margin: 0;
 }
@@ -803,15 +764,6 @@ form p {
     vertical-align: middle;
 }
 
-/* 320px order-form fix */
-#order-form table td:first-child,
-#order-form table th:first-child {
-    padding-left: 0;
-}
-#order-form table td:last-child,
-#order-form table th:last-child {
-    padding-right: 0;
-}
 
 /* ------------------------------ social links -------------------------- */
 .social-links,
