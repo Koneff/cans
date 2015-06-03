@@ -41,7 +41,6 @@ angular.module('cans.controllers',['cans.services'])
             Products.getProducts()
             .then(function(){
                 $scope.allProducts = Products.queue;
-                console.log($scope.allProducts)
             });
 
     })
@@ -49,8 +48,19 @@ angular.module('cans.controllers',['cans.services'])
 
 
 .controller('SubmitCtrl',function($scope){
+        var message = {};
         $scope.submitMessage = function(){
             if ($scope.contactForm.$valid) {
+                message ={
+                    name:$scope.name,
+                    email:$scope.email,
+                    text: $scope.comments
+                }
+                console.log(message);
+                $scope.name = '';
+                $scope.email = '';
+                $scope.comments = '';
+
 
             } else {
                 $scope.submitted = true;
