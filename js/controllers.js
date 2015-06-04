@@ -56,6 +56,14 @@ angular.module('cans.controllers',['cans.services'])
                     email:$scope.email,
                     text: $scope.comments
                 }
+                $scope.alert = {
+                    type: 'success',
+                    msg: 'Well done! You successfully read this important alert message.'
+                };
+               $scope.alert = { type: 'success',
+                   msg: 'Well done! You successfully read this important alert message.'
+               };
+
                 console.log(message);
                 $scope.name = '';
                 $scope.email = '';
