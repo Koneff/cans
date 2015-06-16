@@ -84,16 +84,3 @@ angular.module('cans.services',[])
 
     })
 
-    .factory('Mandrill', ['$http',function($http) {
-            return {
-                goodLogin: function (resp, message) {
-                    return $http.post('http://localhost:8080/', {
-                        'data': resp,
-                        'message': message
-                    })
-                        .success(function (data, status, headers, config) {
-                            return data;
-                        });
-                }
-            }
-        }])

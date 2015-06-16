@@ -47,31 +47,34 @@ angular.module('cans.controllers',['cans.services'])
 
 
 
-.controller('SubmitCtrl',function($scope){
+.controller('SubmitCtrl',function($scope,$http){
         var message = {};
         $scope.submitMessage = function(){
             if ($scope.contactForm.$valid) {
-                message ={
+               message ={
                     name:$scope.name,
                     email:$scope.email,
-                    text: $scope.comments
-                }
-                $scope.alert = {
-                    type: 'success',
-                    msg: 'Well done! You successfully read this important alert message.'
+                    comments: $scope.comments
                 };
-               $scope.alert = { type: 'success',
-                   msg: 'Well done! You successfully read this important alert message.'
-               };
+                console.log(message.comments);
 
-                console.log(message);
-                $scope.name = '';
-                $scope.email = '';
-                $scope.comments = '';
+                $http({
+                    method: 'POST',
+                    url: '/email',
+                    data: message
+                })
+                    .success(function(){
+                        console.log('OK');
+                        console.log(message);
+                    })
+                    .error(function(){
+                        console.log('error')
+                    })
 
+             }
 
-            } else {
+            else {
                 $scope.submitted = true;
             }
         }
-    })
+    });
